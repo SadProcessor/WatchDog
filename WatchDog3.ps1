@@ -5,7 +5,7 @@
 # Setup
 - [stop neo4j service if running]
 - uncomment following in neo4j.conf and save change
-#dbms.security.auth_enabled=false
+dbms.security.auth_enabled=false
 [will disable auth for Localhost only]
 - start neo4j service
 - load watchdog.ps1
