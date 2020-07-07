@@ -5,7 +5,7 @@
 # Setup
 - [stop neo4j service if running]
 - uncomment following in neo4j.conf and save change
-dbms.security.auth_enabled=false
+#dbms.security.auth_enabled=false
 [will disable auth for Localhost only]
 - start neo4j service
 - load watchdog.ps1
@@ -270,7 +270,7 @@ Function Invoke-DataDog{
                     $W=$X|select -expand Count
                     # Out
                     [PScustomObject]@{
-                        Type     = $Obj.metadata.labels[0]
+                        Type     = $Obj.metadata.labels[1]
                         Name     = $Obj.data.name
                         Distance = ($Path.Nodes.Count)-$Step-1
                         Weight   = $W
